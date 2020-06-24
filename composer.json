@@ -1,44 +1,32 @@
 {
-    "name": "robsontenorio/laravel-keycloak-guard",
-    "description": "🔑 Simple Keycloak Guard for Laravel",
-    "keywords": [
-        "laravel",
-        "keycloak"
-    ],
-    "homepage": "https://github.com/robsontenorio/laravel-keycloak-guard",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Robson Tenório"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "firebase/php-jwt": "^5.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "KeycloakGuard\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "KeycloakGuard\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "phpunit --coverage-html coverage"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "KeycloakGuard\\KeycloakGuardServiceProvider"
-            ]
-        }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.3@dev",
-        "orchestra/testbench": "^3.7@dev"
+  "name": "keycloak/restrict-user-in-identity-service-inspector",
+  "description": "Restrict user in keycloak identity service inspector",
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Автухович Андрей",
+      "email": "andrei.avtukhovich@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "firebase/php-jwt": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "KeycloakGuard\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "phpunit --coverage-html coverage"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "KeycloakGuard\\KeycloakGuardServiceProvider"
+      ]
+    }
+  }
 }
