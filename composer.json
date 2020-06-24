@@ -2,7 +2,7 @@
   "name": "keycloak/restrict-user-in-identity-service-inspector",
   "description": "Restrict user in keycloak identity service inspector",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "authors": [
     {
       "name": "Автухович Андрей",
@@ -11,16 +11,12 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "firebase/php-jwt": "dev-master"
+    "firebase/php-jwt": "^5.2"
   },
   "autoload": {
     "psr-4": {
       "KeycloakGuard\\": "src/"
     }
-  },
-  "scripts": {
-    "test": "vendor/bin/phpunit",
-    "test-coverage": "phpunit --coverage-html coverage"
   },
   "extra": {
     "laravel": {
