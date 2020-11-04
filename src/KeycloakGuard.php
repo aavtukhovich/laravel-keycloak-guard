@@ -62,7 +62,7 @@ class KeycloakGuard implements Guard
     {
         try {
             $this->token = $this->request->bearerToken();
-            $introspect =  Http::asForm()->post($this->wellKnown->token_introspection_endpoint, array(
+            $introspect =  Http::asForm()->post($this->wellKnown->introspection_endpoint, array(
                 'token' => $this->token,
                 'client_id' => $this->config['client_resource']
             ))->object();
