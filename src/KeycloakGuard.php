@@ -75,7 +75,8 @@ class KeycloakGuard implements Guard
 					return false;
 				}
 			} else {
-				$this->decodedToken = Token::decode($this->token, $this->public_key);
+				if (!is_null($this->token))
+					$this->decodedToken = Token::decode($this->token, $this->public_key);
 			}
 		} catch (\Exception $e) {
 			throw new TokenException($e->getMessage());
