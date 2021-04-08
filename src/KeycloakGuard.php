@@ -65,7 +65,8 @@ class KeycloakGuard implements Guard
 			if ($this->config['introspect']) {
 				$introspect =  Http::asForm()->post($this->wellKnown->introspection_endpoint, array(
 					'token' => $this->token,
-					'client_id' => $this->config['client_resource']
+					'client_id' => $this->config['client_resource'],
+				        'client_secret' => $this->config['client_secret'],
 				))->object();
 				if (isset($introspect->error)) {
 					return false;
